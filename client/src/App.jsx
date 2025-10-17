@@ -6,6 +6,7 @@ import {Toaster} from "sonner"
 
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import UserProfile from "./pages/UserProfile.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
             <Route index element={<Home/>}/>
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
+            <Route path="/profile" element={<UserProfile/>} />
         </Route>
             {/* <Route>Admin Layout</Route> */}
 
