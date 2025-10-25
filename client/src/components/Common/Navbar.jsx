@@ -58,6 +58,12 @@ const Navbar = () => {
         </div>
         {/* Right - Icons */}
         <div className="flex items-center space-x-4">
+          <Link
+            to="/admin"
+            className="bg-black text-white py-1 px-2 rounded-lg cursor-pointer"
+          >
+            admin
+          </Link>
           <Link to="/profile" className="hover:text-black ">
             <HiOutlineUser className="h-6 w-6 text-gray-700" />
           </Link>
@@ -86,18 +92,45 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-end p-4">
-            <button>
-              <IoMdClose onClick={toggleNavDrawer} className="h-6 w-6 text-gray-600 "/>
-            </button>
+          <button>
+            <IoMdClose
+              onClick={toggleNavDrawer}
+              className="h-6 w-6 text-gray-600 "
+            />
+          </button>
         </div>
         <div className="p-4">
           <h2 className="text-xl font-semibold mb-4">Menu</h2>
-          <nav className="space-y-4" >
-            <Link to="/collections/all" onClick={toggleNavDrawer} className="block uppercase text-gray-600  hover:text-black" >Men</Link>
-            <Link to="/collections/all" onClick={toggleNavDrawer} className="block uppercase text-gray-600 hover:text-black" >Women</Link>
-            <Link to="/collections/all" onClick={toggleNavDrawer} className="block uppercase text-gray-600 hover:text-black" >Top wear</Link>
-            <Link to="/collections/all" onClick={toggleNavDrawer} className="block uppercase text-gray-600 hover:text-black" >Bottom wear</Link>
-          </nav> 
+          <nav className="space-y-4">
+            <Link
+              to="/collections/all"
+              onClick={toggleNavDrawer}
+              className="block uppercase text-gray-600  hover:text-black"
+            >
+              Men
+            </Link>
+            <Link
+              to="/collections/all"
+              onClick={toggleNavDrawer}
+              className="block uppercase text-gray-600 hover:text-black"
+            >
+              Women
+            </Link>
+            <Link
+              to="/collections/all"
+              onClick={toggleNavDrawer}
+              className="block uppercase text-gray-600 hover:text-black"
+            >
+              Top wear
+            </Link>
+            <Link
+              to="/collections/all"
+              onClick={toggleNavDrawer}
+              className="block uppercase text-gray-600 hover:text-black"
+            >
+              Bottom wear
+            </Link>
+          </nav>
         </div>
       </div>
     </>
