@@ -9,6 +9,10 @@ import Register from "./pages/Register.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
 import CollectionPage from "./pages/CollectionPage.jsx";
 import ProductDetails from "./components/Products/ProductDetails.jsx";
+import CheckOut from "./components/Cart/CheckOut.jsx";
+import OrderConfirmation from "./pages/OrderConfirmation.jsx";
+import OrderDetailsPage from "./pages/OrderDetailsPage.jsx";
+import MyOrderPage from "./pages/MyOrderPage.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -21,7 +25,10 @@ function App() {
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/collections/:collection" element={<CollectionPage/>} />
             <Route path="product/:id" element={<ProductDetails/>} />
-            
+            <Route path="/checkout" element= {<CheckOut/>} />
+            <Route path="/order-confirmation" element={<OrderConfirmation/>}/>
+            <Route path="/order/:id" element={<OrderDetailsPage/>} />
+            <Route path="/my-orders" element={<MyOrderPage/>}/>
         </Route>
             {/* <Route>Admin Layout</Route> */}
 
