@@ -15,6 +15,7 @@ import MyOrderPage from "./pages/MyOrderPage.jsx";
 import Notfound from "./pages/Notfound.jsx";
 import AdminHomePage from "./components/Admin/AdminHomePage.jsx";
 import UserManagement from "./components/Admin/UserManagement.jsx";
+import ProductManagement from "./components/Admin/ProductManagement.jsx";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/admin" element={<AdminLayout/>}>
                 <Route index element={<AdminHomePage/>}/>
                 <Route path="users" element={<UserManagement/>}/>
+                <Route path="products" element={<ProductManagement/>}/>
             </Route>
         <Route path="*" element={<Notfound/>} />
       </Routes>
