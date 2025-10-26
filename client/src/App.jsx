@@ -16,6 +16,8 @@ import Notfound from "./pages/Notfound.jsx";
 import AdminHomePage from "./components/Admin/AdminHomePage.jsx";
 import UserManagement from "./components/Admin/UserManagement.jsx";
 import ProductManagement from "./components/Admin/ProductManagement.jsx";
+import EditProductPage from "./components/Admin/EditProductPage.jsx";
+import OrderManagement from "./components/Admin/OrderManagement.jsx";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
                 <Route index element={<AdminHomePage/>}/>
                 <Route path="users" element={<UserManagement/>}/>
                 <Route path="products" element={<ProductManagement/>}/>
+                <Route path="products/:id/edit" element={<EditProductPage/>}/>
+                <Route path="orders" element= {<OrderManagement/>}/>
             </Route>
         <Route path="*" element={<Notfound/>} />
       </Routes>

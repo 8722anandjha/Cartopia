@@ -85,7 +85,7 @@ const ProductManagement = () => {
           <thead className="bg-gray-100 text-xs uppercase text-gray-700">
             <tr>
               <th className="py-3 px-4">Name</th>
-              <th className="py-3 px-4">Price</th>
+              <th className="py-3 px-4 ">Price</th>
               <th className="py-3 px-4">SKU</th>
               <th className="py-3 px-4">Actions</th>
             </tr>
@@ -104,11 +104,11 @@ const ProductManagement = () => {
                   <td className="p-4 font-medium text-gray-900 whitespace-nowrap">
                     {product.name}
                   </td>
-                  <td className="p-4">${product.price}</td>
-                  <td className="p-4">{product.sku}</td>
-                  <td className="p-4">
+                  <td className="p-4  text-center">${product.price}</td>
+                  <td className="p-4 text-center  ">{product.sku}</td>
+                  <td className="p-4 text-center">
                     <Link
-                      to={`/admin/products/${product._id}`}
+                      to={`/admin/products/${product._id}/edit`}
                       className="bg-yellow-500 text-white px-2 py-1 rounded mr-2 hover:bg-yellow-600"
                     >
                       Edit
