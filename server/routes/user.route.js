@@ -1,7 +1,7 @@
 import express from "express";
 import user from "../models/user.schema.js";
 import jwt from "jsonwebtoken";
-
+import protect from "../middleware/auth.middleware.js";
 const router = express.Router();
 
 //@route POST /api/users/register
@@ -89,5 +89,14 @@ router.post("/login", async (req, res) => {
     res.status(500).send('server Error while Login')
   }
 });
+
+
+// @route GET /api/users/profile
+//@desc Get logged-in user's profile (protected Route)
+//@access Private
+
+router.get("/profile",protect , async (req,res)=>{
+    res.json(req.user)
+})
 
 export default router;
