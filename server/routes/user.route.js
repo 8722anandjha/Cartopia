@@ -8,7 +8,7 @@ const router = express.Router();
 //register user
 //@access Public
 router.post("/register", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password,role } = req.body;
 
   try {
     // Registration Logic
@@ -18,7 +18,8 @@ router.post("/register", async (req, res) => {
         message: "user already exists",
       });
     }
-    User = new user({ name, email, password });
+    
+    User = new user({ name, email, password,role });
     await User.save();
 
     const payload = { user: { _id: User._id, role: User.role } };
