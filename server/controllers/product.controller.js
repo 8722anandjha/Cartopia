@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { product } from "../models/product.schema.js";
+import { product } from "../models/product.model.js";
 
 
 

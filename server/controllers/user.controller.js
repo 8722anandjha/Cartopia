@@ -1,4 +1,4 @@
-import user from "../models/user.schema.js";
+import user from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
 

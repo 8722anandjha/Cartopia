@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import user from '../../server/models/user.schema.js'
+import user from '../../server/models/user.model.js'
 
 // Middleware to protect routes
 
