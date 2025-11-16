@@ -23,12 +23,14 @@ app.get("/",(req,res)=>{
 import userRoute from '../server/routes/user.route.js'
 app.use("/api/users",userRoute);
 
-
 import porductRoute from '../server/routes/product.route.js'
 app.use("/api/products",porductRoute)
 
 import cartRoute from './routes/cart.route.js';
 app.use("/api/cart",cartRoute)
+
+import checkoutRoute from '../server/routes/checkout.route.js'
+app.use('/api/checkout',checkoutRoute)
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`)

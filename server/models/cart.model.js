@@ -1,13 +1,16 @@
 import mongoose from 'mongoose'
-const CartItemSchema = new mongoose.Schema({
+// import { product } from './product.model.js'
+// import User from './user.model.js'
+
+const CartItemSchema = new mongoose.Schema({   
     productId:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Product",
+        ref: "product",
         required: true
     },
     name: String,
     image: String,
-    price: String,
+    price: Number,
     size: String,
     color: String,
     quantity:{
