@@ -32,6 +32,9 @@ app.use("/api/cart",cartRoute)
 import checkoutRoute from '../server/routes/checkout.route.js'
 app.use('/api/checkout',checkoutRoute)
 
+import orderRoute from '../server/routes/order.route.js'
+app.use("/api/order",orderRoute)
+
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`)
 })
